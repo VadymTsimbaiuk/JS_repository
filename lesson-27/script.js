@@ -1,6 +1,9 @@
 //comment comit 1
 //comment comit 2
 //comment comit 3
+//comment comit 4
+//comment comit 5
+//comment comit 6
 
 var arrayOfObjects = [
     {name:'Vadym',age:20},
