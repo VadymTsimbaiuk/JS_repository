@@ -1,0 +1,23 @@
+h1{
+  margin: 0 auto;
+    text-align: center;
+}
+
+
+
+.container{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 30%;
+    max-height: 350px;
+    border: 2px solid black;
+    padding: 10px;
+    overflow: hidden;
+   
+}
+#sendButton:hover{
+    background-color: azure;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.5px);
+    border: 1px solid brown;
+    border-radius: 5px;
+}
