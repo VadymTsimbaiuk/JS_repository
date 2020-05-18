@@ -1,27 +1,102 @@
-$(function () {
-    $('#sendButton').on('click', function () {
+function showData(data, isDisplayed) {
+    if (isDisplayed) {
+        console.log(data);
+    }
+}
 
-        if ($('#dateOfBirth').val() == '') {
-            runCustomEffect("shake");
-        } else {
-            runCustomEffect("blind");
-            var dateOfBirth = moment($('#dateOfBirth').val(), ['DD-MM-YYYY', 'MM-DD-YYYY', 'YYYY-MM-DD']);
-            var futureAge = moment().diff(dateOfBirth, 'years');
-            var newDateOfBirth = dateOfBirth.add(futureAge + 20, 'year');
 
-            $('.dayOfWeek').text('Ваш день народження буде у: '+ newDateOfBirth.locale('uk').format('dddd'));
-            $('.text').text(newDateOfBirth.locale('uk').format('Do.MM.YYYY'));
-            $('.futureAge').text('ваш вік:' + (futureAge + 20));
-        }
+var arrayOfCars = [
+    {
+        brandName: 'Honda',
+        model: 'Civic',
+        productionYear: ''
+    },
+    {
+        brandName: 'Mitsubishi',
+        model: 'Lancer',
+        productionYear: ''
+    },
+    {
+        brandName: 'Toyota',
+        model: 'Prado',
+        productionYear: ''
+    },
+    {
+        brandName: 'ZAZ',
+        model: 'Lanos',
+        productionYear: ''
+    },
+    {
+        brandName: 'Hyundai',
+        model: 'Creta',
+       productionYear: ''
+    },
+    {
+        brandName: 'Renault',
+        model: 'Daster',
+        productionYear: ''
+    },
+    {
+        brandName: 'Lada',
+        model: '4*4',
+       productionYear: ''
+    },
+    {
+        brandName: 'Renault',
+        model: 'Logan',
+        productionYear: ''
+    },
+    {
+        brandName: 'Honda',
+        model: 'Accord',
+        productionYear: ''
+    },
+    {
+        brandName: 'Toyota',
+        model: 'Sequoia',
+        productionYear: ''
+    },
+    {
+        brandName: 'ZAZ',
+        model: 'Sens',
+        productionYear: ''
+    }
+  ];
 
-        function runCustomEffect(effectValue) {
-            var options = {};
-            $('.dataForm').effect(effectValue, options, 700, function () {
-                setTimeout(function () {
-                    $('form').removeAttr('style').hide().fadeIn();
-                }, 1000);
-            })
-        }
-    })
-    console.log(moment().toString())
+
+
+var text = '';
+_.each(arrayOfCars, function (data) {
+    data.productionYear = prompt('Вкажіть рік випуску авто ' + data.brandName + ', ' + data.model,data.productionYear);
+    text += ' виробник :  ' + data.brandName + '  модель :' + data.model + '  рік випуску : ' + data.productionYear + '<br>'
+
+});
+
+document.getElementById("collection").innerHTML = text;
+
+
+var groupByName = _.groupBy(arrayOfCars, function (value) {
+    return value.brandName;
 })
+showData(groupByName, true);
+
+var groupByModel = _.groupBy(arrayOfCars, function (value) {
+    return value.model;
+})
+showData(groupByModel, true);
+
+var groupByProductionYearMax = _.max(arrayOfCars, function (value) {
+    return value.productionYear;
+})
+showData(groupByProductionYearMax, true);
+
+var groupByProductionYearMin = _.min(arrayOfCars, function (value) {
+    return value.productionYear;
+})
+showData(groupByProductionYearMin,true);
+
+
+
+
+
+
