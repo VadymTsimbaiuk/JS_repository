@@ -1,0 +1,48 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.plan {
+    margin: 0 auto;
+    justify-content: center;
+    display: block;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+h4:hover {
+    color: brown;
+}
+
+.lessons {
+    border: 1px solid black;
+    width: 200px;
+    position: relative;
+    right: 200px;
+    padding-left: 25px;
+
+}
+
+.lessons li:hover {
+    font-size: 18px;
+    color: brown;
+}
+.container{
+    margin: 0 auto;
+    padding: 10px;
+}
+#draggable {
+    width: 100px;
+    height: 90px;
+    padding: 1em;
+    position: relative;
+
+}
+
+#droppable {
+    width: 500px;
+    height: 250px;
+    padding: 1em;
+    color: black;
+}
