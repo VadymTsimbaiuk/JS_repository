@@ -1,4 +1,6 @@
 //comment comit 1
+//comment comit 2
+//comment comit 3
 
 var arrayOfObjects = [
     {name:'Vadym',age:20},
@@ -9,6 +11,8 @@ var arrayOfObjects = [
 ]
 
 var arrayOfData = [1,2,3,4,5,6,7,8,9,10];
+
+
 
 function showData(data, isDisplayed){
     if(isDisplayed){
