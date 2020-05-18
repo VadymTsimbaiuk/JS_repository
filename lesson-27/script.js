@@ -1,3 +1,5 @@
+//comment comit 1
+
 var arrayOfObjects = [
     {name:'Vadym',age:20},
     {name:'Andrew',age:18},
